@@ -1,0 +1,2 @@
+# krakn
+Angularjs, Ionic, Firebase
