@@ -1,0 +1,15 @@
+<p>
+	<h4>New Contact</h4>
+</p>
+<form name="contactForm" class="form-horizontal" novalidate>
+	<!-- Custom Directives -->
+	<form-field record="contact" field="firstName" required="true" live="false"></form-field>
+	<form-field record="contact" field="lastName" required="true" live="false"></form-field>
+	<form-field ng-repeat='(k,v) in contact | keyFilter: "firstName" | keyFilter: "lastName"' record='contact' field='{{k}}'> </form-field>
+
+	<div class="row form-group">
+		<div class="col-sm-8">
+			<button class="btn btn-primary pull-right" ng-click="save()">Save</button>
+		</div>
+	</div>
+</form>
